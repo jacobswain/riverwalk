@@ -3124,6 +3124,10 @@ button[disabled] {
   .contact-form-card h3 {
     font-size: 1.5rem;
   }
+  
+  .about-content__text {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .site-footer {
