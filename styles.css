@@ -776,7 +776,7 @@ p {
 }
 
 .hero__copy {
-  max-width: 38rem;
+  max-width: 42rem;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -789,9 +789,12 @@ p {
 }
 
 .hero .lead {
-  color: var(--color-ink-700);
-  text-shadow: none;
-  line-height: 1.8;
+  color: #000000;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  line-height: 1.7;
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .hero .eyebrow {
@@ -1408,16 +1411,20 @@ p {
   background: transparent;
   z-index: 2;
   pointer-events: none;
-  padding: 2rem;
+  padding: 2rem 0.5rem;
 }
 
 .calendar-card__overlay-text {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3.3vw, 2.05rem);
+  font-size: clamp(2.112rem, 4.6464vw, 2.8864rem);
   font-weight: 700;
   color: var(--color-white);
   text-align: center;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-shadow: 
+    0 0 20px rgba(50, 43, 131, 0.9),
+    0 0 40px rgba(50, 43, 131, 0.7),
+    0 0 60px rgba(50, 43, 131, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.6);
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
@@ -1425,19 +1432,20 @@ p {
 .calendar-card__info {
   padding: 1.5rem 2rem 2rem;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.25rem;
   min-height: 140px;
   text-align: center;
 }
 
 .calendar-card__info h4 {
   color: var(--color-ink-900);
-  margin: 0 0 0.75rem;
+  margin: 0;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: -0.01em;
 }
+
 
 .calendar-card__date {
   color: var(--color-ink-700);
@@ -2466,12 +2474,34 @@ p {
   margin-bottom: 0;
 }
 
-.ticket-info-card {
-  background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+.tickets-grid {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tickets-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .tickets-grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ticket-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fafcff 100%);
   border-radius: var(--radius-base);
-  padding: 1.75rem 1.5rem;
-  box-shadow: var(--shadow-soft);
-  border: 2px solid rgba(50, 43, 131, 0.15);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  border: 2px solid rgba(50, 43, 131, 0.08);
   text-align: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
@@ -2481,88 +2511,235 @@ p {
   overflow: hidden;
 }
 
-.ticket-info-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 32px 80px rgba(50, 43, 131, 0.25);
-  border-color: rgba(50, 43, 131, 0.4);
-  background: linear-gradient(135deg, #ffffff 0%, #f9fffc 100%);
-}
-
-.ticket-info-card h3 {
-  color: var(--color-ink-900);
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: -0.01em;
-  position: relative;
-  padding-bottom: 0.5rem;
-  line-height: 1.3;
-  min-height: 2.6rem;
-}
-
-.ticket-info-card h3::after {
-  content: '';
+.ticket-card::before {
+  content: '❄';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-  border-radius: 2px;
+  top: -20px;
+  right: -20px;
+  font-size: 120px;
+  color: rgba(100, 199, 207, 0.05);
+  transform: rotate(15deg);
+  transition: all 0.5s ease;
+  pointer-events: none;
 }
 
-.ticket-info-card__price {
+.ticket-card:hover::before {
+  transform: rotate(25deg) scale(1.1);
+  color: rgba(100, 199, 207, 0.08);
+}
+
+.ticket-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 28px 70px rgba(50, 43, 131, 0.25);
+  border-color: rgba(100, 199, 207, 0.4);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.ticket-card--featured {
+  border: 3px solid rgba(100, 199, 207, 0.4);
+  box-shadow: 0 24px 60px rgba(50, 43, 131, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #f0fcff 100%);
+  position: relative;
+}
+
+.ticket-card--wide {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .ticket-card--wide {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.5rem 2rem;
+    text-align: left;
+    align-items: center;
+  }
+  
+  .ticket-card--wide .ticket-card__image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    width: 120px;
+    height: auto;
+  }
+  
+  .ticket-card--wide .ticket-card__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .ticket-card--wide h3 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin: 0;
+  }
+  
+  .ticket-card--wide .ticket-card__price {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .ticket-card--wide .ticket-card__fee {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    text-align: left;
+  }
+  
+  .ticket-card--wide .ticket-card__details {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    align-self: center;
+    border-top: none;
+    border-left: 1px solid rgba(50, 43, 131, 0.1);
+    padding: 0 0 0 2rem;
+    margin: 0;
+  }
+}
+
+.ticket-card__image {
+  margin: 0 auto 1rem;
+  max-width: 150px;
+  transition: all 0.4s ease;
+}
+
+.ticket-card:hover .ticket-card__image {
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.ticket-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(50, 43, 131, 0.15));
+  transition: filter 0.3s ease;
+}
+
+.ticket-card:hover .ticket-card__image img {
+  filter: drop-shadow(0 8px 20px rgba(100, 199, 207, 0.3));
+}
+
+.ticket-card h3 {
+  color: var(--color-ink-900);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.ticket-card__price {
   color: var(--color-primary);
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin: 0;
   line-height: 1;
-  text-shadow: 0 2px 8px rgba(50, 43, 131, 0.15);
+  position: relative;
   transition: all 0.3s ease;
+  text-shadow: 0 2px 8px rgba(50, 43, 131, 0.1);
 }
 
-.ticket-info-card:hover .ticket-info-card__price {
-  transform: scale(1.05);
-  text-shadow: 0 4px 16px rgba(50, 43, 131, 0.25);
+.ticket-card:hover .ticket-card__price {
+  transform: scale(1.08);
+  text-shadow: 0 4px 16px rgba(50, 43, 131, 0.2);
+  color: var(--color-accent);
 }
 
-.ticket-info-card__details {
+.ticket-card__fee {
+  color: var(--color-ink-500);
+  font-size: 0.85rem;
+  margin: -0.25rem 0 0.5rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.ticket-card:hover .ticket-card__fee {
+  color: var(--color-ink-700);
+}
+
+.ticket-card__intro {
+  color: var(--color-ink-700);
+  font-size: 0.9rem;
+  margin: 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: left;
+  border-top: 2px solid rgba(100, 199, 207, 0.15);
+  transition: border-color 0.3s ease;
+}
+
+.ticket-card:hover .ticket-card__intro {
+  border-color: rgba(100, 199, 207, 0.3);
+}
+
+.ticket-card__note {
+  color: var(--color-ink-800);
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0;
+  line-height: 1.6;
+  font-style: normal;
+  text-align: left;
+}
+
+.ticket-card__details {
   list-style: none;
-  padding: 1rem 0 0;
+  padding: 0.5rem 0 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
   text-align: left;
-  border-top: 1px solid rgba(50, 43, 131, 0.1);
+  border-top: none;
 }
 
-.ticket-info-card__details li {
+.ticket-card:hover .ticket-card__details {
+  border-color: rgba(100, 199, 207, 0.3);
+}
+
+.ticket-card__details li {
   color: var(--color-ink-700);
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.5;
   padding-left: 1.75rem;
   position: relative;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-.ticket-info-card:hover .ticket-info-card__details li {
+.ticket-card:hover .ticket-card__details li {
   padding-left: 2rem;
+  color: var(--color-ink-900);
 }
 
-.ticket-info-card__details li::before {
+.ticket-card__details li::before {
   content: '❄';
   position: absolute;
   left: 0;
   color: var(--color-primary);
-  font-weight: 400;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  animation: subtle-spin 8s linear infinite;
 }
 
-.ticket-info-card:hover .ticket-info-card__details li::before {
-  transform: rotate(20deg);
+.ticket-card:hover .ticket-card__details li::before {
+  color: var(--color-accent);
+  transform: scale(1.2) rotate(20deg);
+  animation-play-state: paused;
+}
+
+@keyframes subtle-spin {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 }
 
 .tickets-content {

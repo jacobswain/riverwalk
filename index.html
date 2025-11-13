@@ -217,11 +217,11 @@
                 <div class="calendar-card__image">
                   <img src="public/kids.jpg" alt="Grand Illumination Parade" loading="lazy" />
                   <div class="calendar-card__overlay">
-                    <span class="calendar-card__overlay-text">Grand Illumination Parade</span>
+                    <span class="calendar-card__overlay-text">Winter's Glow</span>
                   </div>
                 </div>
                 <div class="calendar-card__info">
-                  <h4>Winter's Glow</h4>
+                  <h4>Grand Illumination Parade</h4>
                   <p class="calendar-card__date">Saturday, November 22 <span class="snowflake-bullet">❄</span> 7 pm</p>
                 </div>
               </div>
@@ -239,10 +239,13 @@
             <div class="calendar-card__flipper">
               <div class="calendar-card__front">
                 <div class="calendar-card__image">
-                  <img src="public/santa-skate.jpg" alt="Skate & Send: Letters to Santa on Ice" loading="lazy" />
+                  <img src="public/skate-send.jpeg" alt="Skate & Send: Letters to Santa on Ice" loading="lazy" />
+                  <div class="calendar-card__overlay">
+                    <span class="calendar-card__overlay-text">Skate & Send</span>
+                  </div>
                 </div>
                 <div class="calendar-card__info">
-                  <h4>Skate & Send: Letters to Santa on Ice</h4>
+                  <h4>Letters to Santa on Ice</h4>
                   <p class="calendar-card__date">Every Saturday <span class="snowflake-bullet">❄</span> 1–5 pm</p>
                 </div>
               </div>
@@ -252,6 +255,30 @@
                   <p>Glide into the holiday spirit as kids skate, sip cocoa, and drop their wish lists into Santa's mailbox. A festive rinkside tradition that makes every Saturday feel a little more magical.</p>
                   <div class="calendar-card__back-day">Every Saturday</div>
                   <p class="calendar-card__back-meta">1–5 pm</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="calendar-card" data-flip-card>
+            <div class="calendar-card__flipper">
+              <div class="calendar-card__front">
+                <div class="calendar-card__image">
+                  <img src="public/santa-skate.jpg" alt="Skate with Santa" loading="lazy" />
+                  <div class="calendar-card__overlay">
+                    <span class="calendar-card__overlay-text">Skate with Santa</span>
+                  </div>
+                </div>
+                <div class="calendar-card__info calendar-card__info--white">
+                  <h4>A Jolly Spin on the Ice</h4>
+                  <p class="calendar-card__date">December 20 & 21 <span class="snowflake-bullet">❄</span> Time TBD</p>
+                </div>
+              </div>
+              <div class="calendar-card__back">
+                <div class="calendar-card__back-content">
+                  <h4>Skate with Santa</h4>
+                  <p>Hit the ice for a merry skating session with Santa himself! Enjoy holiday music, festive photo ops, and a joyful atmosphere perfect for all ages.</p>
+                  <div class="calendar-card__back-day">December 20 & 21</div>
+                  <p class="calendar-card__back-meta">Time TBD</p>
                 </div>
               </div>
             </div>
@@ -272,76 +299,65 @@
             Reserve your spot on the ice this holiday season.
           </p>
         </div>
-        <style>
-          .tickets-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
-            margin-top: 3rem;
-          }
-          
-          @media (min-width: 768px) {
-            .tickets-info-grid {
-              grid-template-columns: repeat(3, 1fr);
-              gap: 1.5rem;
-            }
-          }
-          
-          @media (min-width: 1024px) {
-            .tickets-info-grid {
-              grid-template-columns: repeat(5, 1fr);
-              gap: 1.25rem;
-            }
-          }
-        </style>
-        <div class="shell tickets-info-grid">
-          <div class="ticket-info-card ticket-individual" style="transform: scale(1.05); box-shadow: 0 24px 60px rgba(50, 43, 131, 0.3); border: 3px solid rgba(100, 199, 207, 0.3); z-index: 2;">
-            <h3>General Admission</h3>
-            <p class="ticket-info-card__price" style="font-size: 2.5rem;">$17</p>
-            <p style="margin: -0.5rem 0 0.5rem; font-size: 0.85rem; color: var(--color-ink-500);">+ $1.50 fee + taxes<br>/skater</p>
-            <ul class="ticket-info-card__details">
-              <li>75-minute skate session</li>
-              <li>Skate rentals included</li>
-            </ul>
+        <div class="shell tickets-grid">
+          <div class="tickets-grid-2x2">
+            <div class="ticket-card ticket-card--featured">
+              <h3>General Admission</h3>
+              <p class="ticket-card__price">$17</p>
+              <p class="ticket-card__fee">+ $1.50 fee + taxes/skater</p>
+              <p class="ticket-card__intro"></p>
+              <ul class="ticket-card__details">
+                <li>75-minute skate session</li>
+                <li>Skate rentals included</li>
+                <li>Age 3 and up</li>
+              </ul>
+            </div>
+            <div class="ticket-card">
+              <h3>Ice & Lights Combo Pass</h3>
+              <p class="ticket-card__price">$35</p>
+              <p class="ticket-card__fee">+ $1.50 fee + taxes/skater</p>
+              <p class="ticket-card__intro">Enjoy <strong>both</strong> experiences in one visit:</p>
+              <ul class="ticket-card__details">
+                <li>75-minute ice skating session + skate rental</li>
+                <li>Admission to Winterfest on the Wisconsin</li>
+              </ul>
+              <p class="ticket-card__note">Combo tickets must be used <strong>on the same day</strong>. Guests must <strong>skate first</strong>. After, you'll receive your <strong>Winterfest ticket</strong> for same-day entry.</p>
+            </div>
+            <div class="ticket-card">
+              <h3>Cheap Skate Mondays</h3>
+              <p class="ticket-card__price">$15</p>
+              <p class="ticket-card__fee">+ $1.50 fee + taxes/skater</p>
+              <p class="ticket-card__intro"></p>
+              <ul class="ticket-card__details">
+                <li>$2 off all day Monday</li>
+                <li>75-minute skate session</li>
+                <li>Skate rentals included</li>
+              </ul>
+            </div>
+            <div class="ticket-card">
+              <h3>Military Discount</h3>
+              <p class="ticket-card__price">$16</p>
+              <p class="ticket-card__fee">+ $1.50 fee + taxes/skater</p>
+              <p class="ticket-card__intro"></p>
+              <ul class="ticket-card__details">
+                <li>$1 off all season</li>
+                <li>Only offered on-site with valid ID</li>
+                <li>75-minute skate session</li>
+                <li>Skate rentals included</li>
+              </ul>
+            </div>
           </div>
-          <div class="ticket-info-card ticket-cheap-skate">
-            <h3>Cheap Skate Mondays</h3>
-            <p class="ticket-info-card__price" style="font-size: 2.25rem;">$15</p>
-            <p style="margin: -0.5rem 0 0.5rem; font-size: 0.85rem; color: var(--color-ink-500);">+ $1.50 fee + taxes<br>/skater</p>
-            <ul class="ticket-info-card__details">
-              <li>$2 off all day Monday</li>
-              <li>75-minute skate session</li>
-              <li>Skate rentals included</li>
-            </ul>
-          </div>
-          <div class="ticket-info-card">
-            <h3>Military Discount</h3>
-            <p class="ticket-info-card__price" style="font-size: 2.25rem;">$16</p>
-            <p style="margin: -0.5rem 0 0.5rem; font-size: 0.85rem; color: var(--color-ink-500);">+ $1.50 fee + taxes<br>/skater</p>
-            <ul class="ticket-info-card__details">
-              <li>Only offered on-site with valid ID</li>
-              <li>75-minute skate session</li>
-              <li>Skate rentals included</li>
-            </ul>
-          </div>
-          <div class="ticket-info-card">
+          <div class="ticket-card ticket-card--wide">
+            <div class="ticket-card__image">
+              <img src="public/skate-helper.png" alt="Skate Helper" loading="lazy" />
+            </div>
             <h3>Skate Helper Rental</h3>
-            <p class="ticket-info-card__price" style="font-size: 2.25rem;">$7</p>
-            <p style="margin: -0.5rem 0 0.5rem; font-size: 0.85rem; color: var(--color-ink-500);">Optional add-on</p>
-            <ul class="ticket-info-card__details">
+            <p class="ticket-card__price">$7</p>
+            <p class="ticket-card__fee">Optional add-on</p>
+            <ul class="ticket-card__details">
               <li>Limited availability</li>
               <li>Available online or on-site</li>
               <li>Helps new & anxious skaters</li>
-            </ul>
-          </div>
-          <div class="ticket-info-card">
-            <h3>Ice & Lights Combo Pass</h3>
-            <p class="ticket-info-card__price" style="font-size: 2.25rem;">$35</p>
-            <p style="margin: -0.5rem 0 0.5rem; font-size: 0.85rem; color: var(--color-ink-500);">+ $1.50 fee + taxes<br>/skater</p>
-            <ul class="ticket-info-card__details">
-              <li>75-minute session + skate rental</li>
-              <li>Includes Winterfest admission</li>
-              <li>Must be used same day; skate first</li>
             </ul>
           </div>
         </div>
