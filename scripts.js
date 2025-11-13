@@ -372,12 +372,12 @@ if (contactForm) {
 
     // Build email HTML content
     const emailHtml = `
-      <div style="font-family: 'Outfit', -apple-system, sans-serif; color: #0b1b33; max-width: 600px;">
-        <h2 style="color: #2d5954; border-bottom: 3px solid #2d5954; padding-bottom: 10px;">New Private Party Inquiry</h2>
+      <div style="font-family: 'Montserrat', -apple-system, sans-serif; color: #1a1a2e; max-width: 600px;">
+        <h2 style="color: #322B83; border-bottom: 3px solid #322B83; padding-bottom: 10px;">New Private Party Inquiry</h2>
         <p style="font-size: 1em; color: #666; margin-bottom: 20px;">CultureMap City Rink</p>
         
         <table style="width: 100%; border-collapse: collapse;">
-          <tr style="background-color: #f5fbff;">
+          <tr style="background-color: #f5f7fb;">
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600; width: 40%;">Contact Name</td>
             <td style="padding: 12px; border: 1px solid #e0e0e0;">${data.name}</td>
           </tr>
@@ -385,15 +385,15 @@ if (contactForm) {
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600;">Phone</td>
             <td style="padding: 12px; border: 1px solid #e0e0e0;">${data.phone}</td>
           </tr>
-          <tr style="background-color: #f5fbff;">
+          <tr style="background-color: #f5f7fb;">
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600;">Email Address</td>
-            <td style="padding: 12px; border: 1px solid #e0e0e0;"><a href="mailto:${data.email}" style="color: #2d5954;">${data.email}</a></td>
+            <td style="padding: 12px; border: 1px solid #e0e0e0;"><a href="mailto:${data.email}" style="color: #322B83;">${data.email}</a></td>
           </tr>
           <tr>
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600;">Company Name</td>
             <td style="padding: 12px; border: 1px solid #e0e0e0;">${data.company}</td>
           </tr>
-          <tr style="background-color: #f5fbff;">
+          <tr style="background-color: #f5f7fb;">
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600;">Party Size</td>
             <td style="padding: 12px; border: 1px solid #e0e0e0;"><strong>${data.partySize} guests</strong></td>
           </tr>
@@ -401,7 +401,7 @@ if (contactForm) {
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600;">Celebration Type</td>
             <td style="padding: 12px; border: 1px solid #e0e0e0;">${data.celebrationType}</td>
           </tr>
-          <tr style="background-color: #f5fbff;">
+          <tr style="background-color: #f5f7fb;">
             <td style="padding: 12px; border: 1px solid #e0e0e0; font-weight: 600;">Preferred Date & Time</td>
             <td style="padding: 12px; border: 1px solid #e0e0e0;"><strong>${data.dateTime}</strong></td>
           </tr>

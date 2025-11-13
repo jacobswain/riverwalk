@@ -1,16 +1,16 @@
-# ❄️ CultureMap City Rink
+# ⛸️ Skate the Riverwalk
 
 > *Where winter magic meets downtown Dallas*
 
-Welcome to the digital home of the CultureMap City Rink! This website brings the festive spirit of our holiday ice rink to life, featuring event information, ticket purchasing, themed event calendars, and private party booking.
+Welcome to the digital home of Skate the Riverwalk! This website brings the festive spirit of our holiday skating experience to life, featuring event information, ticket purchasing, themed event calendars, and private party booking.
 
 ---
 
 ## ✨ About the Experience
 
-The CultureMap City Rink presented by Verizon transforms Main Street Garden into a winter wonderland with themed programming, community events, and unforgettable holiday experiences.
+Skate the Riverwalk presented by Verizon transforms Main Street Garden into a winter wonderland with themed programming, community events, and unforgettable holiday experiences.
 
-**🗓️ Season:** November 26, 2025 - January 4, 2026  
+**🗓️ Season:** November 26, 2025 - January 4, 2026
 **📍 Location:** Main Street Garden, Downtown Dallas
 
 ---
@@ -18,6 +18,7 @@ The CultureMap City Rink presented by Verizon transforms Main Street Garden into
 ## 🎨 What Makes This Special
 
 ### Interactive Features
+
 - ❄️ **Animated Snowflakes** - Delightful falling snow throughout the experience
 - 🎴 **Flip Card Calendar** - Touch or click event cards to reveal magical details
 - 🎫 **Smart Ticket Display** - Three beautifully designed pricing tiers
@@ -25,6 +26,7 @@ The CultureMap City Rink presented by Verizon transforms Main Street Garden into
 - ♿ **Accessible by Design** - Everyone can enjoy the experience
 
 ### Themed Events
+
 - 🎄 Tree Lighting Ceremony
 - 🎬 Family Movie Night
 - 🛍️ Shop + Skate
@@ -33,6 +35,7 @@ The CultureMap City Rink presented by Verizon transforms Main Street Garden into
 - 🎉 Dallas Holiday Parade
 
 ### User Experience
+
 - 🚀 **Lightning Fast** - Optimized performance with deferred loading
 - 🎯 **Intuitive Navigation** - Find what you need instantly
 - ❓ **Helpful FAQ** - Accordion-style answers to common questions
@@ -68,6 +71,7 @@ Ready to bring some winter magic to your local machine? Here's how!
 #### 🐍 Option 1: Python Server
 
 Perfect if you have Python installed:
+
 ```bash
 python -m http.server 8000
 ```
@@ -77,6 +81,7 @@ Then visit `http://localhost:8000` and watch the snowflakes fall! ❄️
 #### 📦 Option 2: Node Server
 
 Prefer Node? We've got you:
+
 ```bash
 npx serve
 ```
@@ -85,7 +90,7 @@ Open the URL it provides and start skating! ⛸️
 
 #### ⚡ Option 3: Quick Preview
 
-In a hurry? Just double-click `index.html` in your file browser. 
+In a hurry? Just double-click `index.html` in your file browser.
 
 *Note: Some interactive features work best with a proper server.*
 
@@ -94,7 +99,7 @@ In a hurry? Just double-click `index.html` in your file browser.
 Here's where everything lives:
 
 ```
-ice_rink/
+riverwalk/
 ├── index.html                          # ✨ The main stage
 ├── styles.css                          # 🎨 All the pretty colors
 ├── scripts.js                          # ⚡ Interactive magic
@@ -135,14 +140,14 @@ Making changes is easy as a Sunday morning skate:
 
 Understanding where everything is:
 
-| Section | What It Does | Special Features |
-|---------|--------------|------------------|
-| **Navigation** | Sticky header | Mobile menu toggle for small screens |
-| **Hero** | Eye-catching welcome | Animated snowflakes & prominent CTA |
-| **Calendar** | Event showcase | Interactive flip cards with details |
-| **Tickets** | Pricing display | Three tiers with clear benefits |
-| **FAQ** | Helpful answers | Smooth accordion interactions |
-| **Footer** | Social & legal | Links to social media channels |
+| Section              | What It Does         | Special Features                     |
+| -------------------- | -------------------- | ------------------------------------ |
+| **Navigation** | Sticky header        | Mobile menu toggle for small screens |
+| **Hero**       | Eye-catching welcome | Animated snowflakes & prominent CTA  |
+| **Calendar**   | Event showcase       | Interactive flip cards with details  |
+| **Tickets**    | Pricing display      | Three tiers with clear benefits      |
+| **FAQ**        | Helpful answers      | Smooth accordion interactions        |
+| **Footer**     | Social & legal       | Links to social media channels       |
 
 ### 🎨 Customization Made Simple
 
@@ -198,7 +203,7 @@ fly auth login
 fly deploy
 ```
 
-Your ice rink will be live in minutes!
+Your skating experience will be live in minutes!
 
 ### 🐳 Docker Option
 
@@ -206,10 +211,10 @@ Prefer to containerize? We've got you covered:
 
 ```bash
 # Build the image
-docker build -t ice-rink .
+docker build -t riverwalk .
 
 # Run it locally
-docker run -p 8080:80 ice-rink
+docker run -p 8080:80 riverwalk
 ```
 
 Visit `http://localhost:8080` to see it in action!
@@ -259,12 +264,15 @@ Everyone deserves to experience the magic:
 This magical experience is brought to you by:
 
 ### ❄️ Managed by Ice Rink Events
+
 The nation's leading designer and operator of seasonal and special-event ice rinks. With hundreds of successful installations across the U.S. and around the world, they know how to make winter magic happen.
 
 ### 📰 Powered by CultureMap.com
+
 Dallas' go-to source for lifestyle, dining, and entertainment news. They keep the city connected to what's happening.
 
 ### 🏙️ In Partnership with Downtown Dallas, Inc.
+
 Champions of a clean, safe, and thriving city center. They enhance public services, support growth, and care for the community spaces that make Downtown Dallas shine.
 
 ---
@@ -272,17 +280,19 @@ Champions of a clean, safe, and thriving city center. They enhance public servic
 ## 💬 Get in Touch
 
 ### For Technical Issues
+
 Running into a bug or have a development question? Reach out to the development team.
 
 ### For Event Inquiries
-Questions about tickets, events, or private parties?  
+
+Questions about tickets, events, or private parties?
 📧 Email: [sales@culturemap.com](mailto:sales@culturemap.com)
 
 ---
 
 ## 📜 License
 
-© 2025 CultureMap City Rink presented by Verizon
+© 2025 Skate the Riverwalk presented by Verizon
 
 ---
 
@@ -293,4 +303,3 @@ Questions about tickets, events, or private parties?
 *Bringing winter magic to the heart of downtown*
 
 </div>
-
