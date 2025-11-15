@@ -19,6 +19,14 @@
       media="print"
       onload="this.media='all'"
     />
+
+    
+<script src ="https://cdn01.basis.net/assets/up.js?um=1"></script>
+<script type="text/javascript">
+	cntrUpTag.iap("b6e3d02a725b30ea");
+</script>
+
+
     <noscript>
       <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Cinzel+Decorative:wght@400;700;900&display=swap"
@@ -26,7 +34,8 @@
       />
     </noscript>
     <link rel="stylesheet" href="styles.css?v=5" />
-    <link rel="preload" as="image" href="public/event-logo.png" />
+    <link rel="preload" as="image" href="public/event-logo.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="public/skates.jpg" fetchpriority="high" />
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXZWGNHG46"></script>
 <script>
@@ -97,7 +106,7 @@
       <section class="hero" id="top">
         <div class="shell hero__content">
           <div class="hero__logo">
-            <img src="public/event-logo.png" alt="TownBank Fountain Park Ice Rink Logo" class="hero__logo-image" fetchpriority="high" />
+            <img src="public/event-logo.png" alt="TownBank Fountain Park Ice Rink Logo" class="hero__logo-image" width="800" height="400" fetchpriority="high" />
           </div>
           <div class="hero__copy">
             <p class="lead">
@@ -111,7 +120,7 @@
       <section class="section section--light" id="about">
         <div class="shell about-content">
           <div class="about-content__image">
-            <img src="public/skates.jpg" alt="Children skating at the ice rink" class="about-image" loading="lazy" />
+            <img src="public/skates.jpg" alt="Children skating at the ice rink" class="about-image" width="800" height="600" loading="lazy" decoding="async" />
           </div>
           <div class="about-content__text">
             <h2>About</h2>
@@ -204,7 +213,7 @@
             <div class="calendar-card__flipper">
               <div class="calendar-card__front">
                 <div class="calendar-card__image">
-                  <img src="public/kids.jpg" alt="Grand Illumination Parade" loading="lazy" />
+                  <img src="public/kids.jpg" alt="Grand Illumination Parade" width="600" height="400" loading="lazy" decoding="async" />
                   <div class="calendar-card__overlay">
                     <span class="calendar-card__overlay-text">Winter's Glow</span>
                   </div>
@@ -228,7 +237,7 @@
             <div class="calendar-card__flipper">
               <div class="calendar-card__front">
                 <div class="calendar-card__image">
-                  <img src="public/skate-send.jpeg" alt="Skate & Send: Letters to Santa on Ice" loading="lazy" />
+                  <img src="public/skate-send.jpeg" alt="Skate & Send: Letters to Santa on Ice" width="600" height="400" loading="lazy" decoding="async" />
                   <div class="calendar-card__overlay">
                     <span class="calendar-card__overlay-text">Skate & Send</span>
                   </div>
@@ -252,7 +261,7 @@
             <div class="calendar-card__flipper">
               <div class="calendar-card__front">
                 <div class="calendar-card__image">
-                  <img src="public/santa-skate.jpg" alt="Skate with Santa" loading="lazy" />
+                  <img src="public/santa-skate.jpg" alt="Skate with Santa" width="600" height="400" loading="lazy" decoding="async" />
                   <div class="calendar-card__overlay">
                     <span class="calendar-card__overlay-text">Skate with Santa</span>
                   </div>
@@ -301,7 +310,7 @@
             <div class="calendar-card__flipper">
               <div class="calendar-card__front">
                 <div class="calendar-card__image">
-                  <img src="public/santa-maritime.jpg" alt="Santa's Maritime Morning at Nauticus" loading="lazy" />
+                  <img src="public/santa-maritime.jpg" alt="Santa's Maritime Morning at Nauticus" width="600" height="400" loading="lazy" decoding="async" />
                   <div class="calendar-card__overlay">
                     <span class="calendar-card__overlay-text">Santa's Maritime Morning</span>
                   </div>
@@ -424,7 +433,7 @@
           <div class="ticket-card-centered">
             <div class="ticket-card">
               <div class="ticket-card__image">
-                <img src="public/skate-helper.png" alt="Skate Helper" loading="lazy" />
+                <img src="public/skate-helper.png" alt="Skate Helper" width="400" height="400" loading="lazy" decoding="async" />
               </div>
               <h3>Skate Helper Rental</h3>
               <p class="ticket-card__price">$7</p>
@@ -735,7 +744,7 @@
           <div class="info-section managed-by">
             <div class="managed-by-item">
               <div class="managed-by-logo">
-                <img src="public/event-logo-black.png" alt="TownBank Fountain Park Ice Rink Logo" loading="lazy" />
+                <img src="public/event-logo-black.png" alt="TownBank Fountain Park Ice Rink Logo" width="400" height="200" loading="lazy" decoding="async" />
               </div>
               <h3>Managed by Ice Rink Events</h3>
               <p>The nation's leading designer and operator of seasonal and special-event ice rinks, with hundreds of successful installations across the U.S. and around the world.</p>
