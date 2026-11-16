@@ -54,7 +54,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe sections and cards
-const animatedElements = document.querySelectorAll('.section, .calendar-card, .about-content, .more-info-card');
+const animatedElements = document.querySelectorAll('.section, .about-content, .more-info-card');
 animatedElements.forEach((el) => {
   el.classList.add('reveal');
   observer.observe(el);
@@ -98,31 +98,6 @@ buttons.forEach(button => {
     button.style.animation = '';
   });
 });
-
-// Calendar card flip functionality
-const flipCards = document.querySelectorAll('[data-flip-card]');
-
-// Check if device supports hover (desktop)
-const isHoverDevice = window.matchMedia('(hover: hover)').matches;
-
-if (isHoverDevice) {
-  // Desktop: flip on hover
-  flipCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.classList.add('is-flipped');
-    });
-    card.addEventListener('mouseleave', () => {
-      card.classList.remove('is-flipped');
-    });
-  });
-} else {
-  // Mobile/Touch: flip on click
-  flipCards.forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('is-flipped');
-    });
-  });
-}
 
 // FAQ Accordion functionality
 const faqItems = document.querySelectorAll('[data-faq]');
